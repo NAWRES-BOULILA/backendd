@@ -66,7 +66,7 @@ pipeline {
            {
             steps {
             sh
-                sh 'docker image rmi ranimelhaj/imagedocker'
+                sh 'docker image rmi nawresboulila/springprojec'
            
                      
             }
