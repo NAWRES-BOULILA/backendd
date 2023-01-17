@@ -34,7 +34,12 @@ pipeline {
                                         }
                            }
                              
-
+  stage('MVN deploy'){
+                                              steps{
+                                                  sh  'mvn deploy'
+                                              
+                                        }
+                           }
                     stage('Build docker image'){
                                                  steps{
                                                      script{
@@ -57,6 +62,17 @@ pipeline {
                                 sh 'echo "Docker is pushing ...."'
                                	sh 'docker push nawresboulila/springproject'
                                   }  }
+		stage('Clean')
+           {
+            steps {
+            sh
+                sh 'docker image rmi ranimelhaj/imagedocker'
+           
+                     
+            }
+         
+         
+         }
 
                        
 
