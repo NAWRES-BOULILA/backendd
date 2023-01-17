@@ -58,11 +58,7 @@ pipeline {
                                	sh 'docker push nawresboulila/springproject'
                                   }  }
 
-                              /*       stage('Docker compose') {
-
-                          steps {
-                               sh 'docker-compose up -d'
-                                 }*/  }
+                       
 
 
 
